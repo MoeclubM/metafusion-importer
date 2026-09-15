@@ -1,0 +1,6 @@
+# 构建产物（只忽略根目录下的二进制，不要忽略 cmd/mf-importer 源码目录）
+/mf-importer
+/mf-importer.exe
+
+# 本地批次账本
+/import-logs/
