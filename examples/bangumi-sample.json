@@ -1,0 +1,44 @@
+{
+  "_comment": "sourceGraph 示例：A-B-C 链条，用于演示层级规则与 dry-run。真实数据由来源包（internal/bangumi）产出。",
+  "source": "bangumi",
+  "nodes": [
+    {
+      "source_id": "A",
+      "kind": "work",
+      "title": "示例作品",
+      "entity": {
+        "kind": "work",
+        "title": "示例作品",
+        "original_language": "ja",
+        "types": ["anime"],
+        "translations": { "ja": { "title": "サンプル作品" }, "zh-CN": { "title": "示例作品" } }
+      }
+    },
+    {
+      "source_id": "B",
+      "kind": "agent",
+      "title": "示例监督",
+      "entity": {
+        "kind": "agent",
+        "title": "示例监督",
+        "types": ["person"],
+        "translations": { "ja": { "title": "サンプル監督" } }
+      }
+    },
+    {
+      "source_id": "C",
+      "kind": "agent",
+      "title": "示例角色",
+      "entity": {
+        "kind": "agent",
+        "title": "示例角色",
+        "types": ["character"],
+        "translations": { "ja": { "title": "サンプルキャラ" } }
+      }
+    }
+  ],
+  "edges": [
+    { "from": "A", "to": "B", "type": "directed_by", "relation": { "type": "directed_by" } },
+    { "from": "B", "to": "C", "type": "character_in", "relation": { "type": "character_in", "attributes": { "role": "main" } } }
+  ]
+}
