@@ -35,13 +35,13 @@
 
 ~~~sh
 # 只算计划（离线，不写任何东西）
-mf-importer plan -in examples/bangumi-sample.json -root 12 -depth 2
+mf-importer plan -in examples/bangumi-sample.json -root A -depth 2
 
 # 执行导入（--dry-run 只演算不写入）
 export MF_API=https://findverse.cc
 export MF_TOKEN=<账号服务签发的用户令牌>
-mf-importer run -in examples/bangumi-sample.json -root 12 -depth 2 \
-  -actor curator -note "Bangumi 12 首次导入（层级 2）" -log ./import-logs
+mf-importer run -in examples/bangumi-sample.json -root A -depth 2 \
+  -actor curator -note "示例来源图首次导入（层级 2）" -log ./import-logs
 
 # 查看 / 评论 / 回退
 mf-importer batches -log ./import-logs

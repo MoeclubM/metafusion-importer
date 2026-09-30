@@ -10,7 +10,7 @@
         "kind": "work",
         "title": "示例作品",
         "original_language": "ja",
-        "types": ["anime"],
+        "attributes": { "tags": ["动画"] },
         "translations": { "ja": { "title": "サンプル作品" }, "zh-CN": { "title": "示例作品" } }
       }
     },
@@ -21,24 +21,22 @@
       "entity": {
         "kind": "agent",
         "title": "示例监督",
-        "types": ["person"],
         "translations": { "ja": { "title": "サンプル監督" } }
       }
     },
     {
       "source_id": "C",
       "kind": "agent",
-      "title": "示例角色",
+      "title": "示例制作团体",
       "entity": {
         "kind": "agent",
-        "title": "示例角色",
-        "types": ["character"],
-        "translations": { "ja": { "title": "サンプルキャラ" } }
+        "title": "示例制作团体",
+        "translations": { "ja": { "title": "サンプル制作チーム" } }
       }
     }
   ],
   "edges": [
     { "from": "A", "to": "B", "type": "directed_by", "relation": { "type": "directed_by" } },
-    { "from": "B", "to": "C", "type": "character_in", "relation": { "type": "character_in", "attributes": { "role": "main" } } }
+    { "from": "B", "to": "C", "type": "member_of", "relation": { "type": "member_of" } }
   ]
 }
