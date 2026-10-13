@@ -60,7 +60,7 @@ func usage() {
 		"",
 		"写目录子命令 run / rollback 已删除。外部来源请走 MetaFusion 只读查询 API。",
 		"环境变量：MF_IMPORT_LOG_DIR（批次账本目录，默认 ./import-logs）",
-	}, "\n") + "\n")
+	}, "\n")+"\n")
 }
 
 type sourceGraph struct {
